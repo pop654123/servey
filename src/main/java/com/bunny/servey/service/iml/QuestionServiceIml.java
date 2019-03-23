@@ -16,11 +16,15 @@ public class QuestionServiceIml implements QuestionService {
     QuestionDao questionDao;
     @Override
     public String getQuestion() {
-        log.info("wm_debug:getQuestion in");
         List<QuestionVO> QuestionList= new ArrayList<>();
         QuestionList = questionDao.findAll();
-        log.info("QuestionList size = "+QuestionList.size());
         log.info("QuestionList :"+QuestionList.toString());
         return QuestionList.toString();
     }
+
+    @Override
+    public void saveQuestion(QuestionVO questionVO) {
+        questionDao.save(questionVO);
+    }
+
 }
