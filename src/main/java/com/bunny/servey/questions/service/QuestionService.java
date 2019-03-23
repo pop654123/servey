@@ -1,6 +1,6 @@
-package com.bunny.servey.service;
+package com.bunny.servey.questions.service;
 
-import com.bunny.servey.vo.QuestionVO;
+import com.bunny.servey.questions.vo.QuestionVO;
 
 public interface QuestionService {
     String getQuestion();

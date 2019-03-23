@@ -1,8 +1,8 @@
-package com.bunny.servey.service.iml;
+package com.bunny.servey.questions.service.iml;
 
-import com.bunny.servey.dao.QuestionDao;
-import com.bunny.servey.service.QuestionService;
-import com.bunny.servey.vo.QuestionVO;
+import com.bunny.servey.questions.dao.QuestionDao;
+import com.bunny.servey.questions.service.QuestionService;
+import com.bunny.servey.questions.vo.QuestionVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

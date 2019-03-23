@@ -1,13 +1,10 @@
-package com.bunny.servey.controller;
+package com.bunny.servey.questions.controller;
 
-import com.bunny.servey.service.QuestionService;
-import com.bunny.servey.vo.QuestionVO;
+import com.bunny.servey.questions.service.QuestionService;
+import com.bunny.servey.questions.vo.QuestionVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/question")
@@ -15,7 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class QuestionController {
     @Autowired
     QuestionService questionService;
+
     @RequestMapping(value="getQuestionList",method = RequestMethod.GET)
+    @ResponseBody
     public String getQuestionList(){
         log.info("getQuestionList in");
         String result = questionService.getQuestion();
@@ -23,6 +22,7 @@ public class QuestionController {
     }
 
     @RequestMapping(value="addQuestion",method = RequestMethod.POST,consumes="application/json")
+    @ResponseBody
     public String addQuestion(@RequestBody QuestionVO questionVO){
         log.info("addQuestion in : " + questionVO);
         String returnData;

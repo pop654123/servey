@@ -1,4 +1,4 @@
-package com.bunny.servey.vo;
+package com.bunny.servey.questions.vo;
 
 import com.alibaba.fastjson.JSONObject;
 import lombok.Getter;
